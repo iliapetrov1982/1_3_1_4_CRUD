@@ -1,7 +1,7 @@
 package controller;
 
 import model.Skill;
-import repository.DeveloperTable;
+import repository.DeveloperRepository;
 
 import java.util.Set;
 
@@ -15,7 +15,7 @@ public class Updating {
     }
 
     public void updateSkils() {
-        DeveloperTable developerTable = new DeveloperTable();
+        DeveloperRepository developerTable = new DeveloperRepository();
         developerTable.addNewSkill(id, skills);
     }
 }

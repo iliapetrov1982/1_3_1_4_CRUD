@@ -1,0 +1,12 @@
+1	Spring
+2	Mavev
+3	JS
+4	React
+5	C++
+6	Java
+7	Django
+8	Python
+9	SKlearn
+10	Angular
+11	Ruby
+12	Maven

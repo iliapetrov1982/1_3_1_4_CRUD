@@ -1,6 +1,6 @@
 package controller;
 
-import repository.DeveloperTable;
+import repository.DeveloperRepository;
 
 public class Reading {
     private String id;
@@ -10,7 +10,7 @@ public class Reading {
     }
 
     public String getDevInfoById() {
-        DeveloperTable developerTable = new DeveloperTable();
+        DeveloperRepository developerTable = new DeveloperRepository();
         return developerTable.getDevInfo(id);
     }
 }

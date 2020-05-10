@@ -1,17 +1,27 @@
 package model;
 
 public class Skill {
-    private String skill;
+    private Long id;
+    private String name;
 
-    public Skill(String skill) {
-        this.skill = skill;
+    public Skill(Long id, String skill) {
+        this.id = id;
+        this.name = skill;
     }
 
-    public String getSkill() {
-        return skill;
+    public Skill(Long id) {
+        this.id = id;
     }
 
-    public void setSkill(String skill) {
-        this.skill = skill;
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

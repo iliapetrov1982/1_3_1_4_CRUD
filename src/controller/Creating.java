@@ -1,7 +1,7 @@
 package controller;
 
 import model.Developer;
-import repository.DeveloperTable;
+import repository.DeveloperRepository;
 
 public class Creating {
     private Developer developer;
@@ -11,7 +11,7 @@ public class Creating {
     }
 
     public void addNewDeveloper() {
-        DeveloperTable table = new DeveloperTable();
+        DeveloperRepository table = new DeveloperRepository();
         table.addNewDeveloper(developer);
     }
 }

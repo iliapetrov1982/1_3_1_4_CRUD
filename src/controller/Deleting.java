@@ -1,6 +1,6 @@
 package controller;
 
-import repository.DeveloperTable;
+import repository.DeveloperRepository;
 
 public class Deleting {
     private String id;
@@ -10,7 +10,7 @@ public class Deleting {
     }
 
     public void deleteCurrentDev() {
-        DeveloperTable developerTable = new DeveloperTable();
+        DeveloperRepository developerTable = new DeveloperRepository();
         developerTable.deleteDev(id);
     }
 }

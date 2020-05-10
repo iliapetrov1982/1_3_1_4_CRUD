@@ -1,4 +1,0 @@
-Spring
-Mavev
-JS
-React
