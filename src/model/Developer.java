@@ -15,6 +15,9 @@ public class Developer {
         this.account = account;
     }
 
+    public Developer() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -33,12 +36,16 @@ public class Developer {
 
     @Override
     public String toString() {
+        if (id != null) {
         return String.format("%d\t%s\t%s\t%d",
                 id,
                 name,
                 setValuesToString(skills),
                 account.getId()
             );
+        } else {
+            return "Developer not found";
+        }
     }
 
     // Преобразуем set скилов в строку

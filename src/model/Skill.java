@@ -13,6 +13,9 @@ public class Skill {
         this.id = id;
     }
 
+    public Skill() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -23,5 +26,17 @@ public class Skill {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        if (id != null) {
+            return String.format("%d\t%s",
+                    id,
+                    name
+            );
+        } else {
+            return "Skill not found";
+        }
     }
 }

@@ -1,6 +1,8 @@
 package controller;
 
+import model.Developer;
 import repository.DeveloperRepository;
+import repository.SkillRepository;
 
 public class Reading {
     private String id;
@@ -10,7 +12,12 @@ public class Reading {
     }
 
     public String getDevInfoById() {
-        DeveloperRepository developerTable = new DeveloperRepository();
-        return developerTable.getDevInfo(id);
+        DeveloperRepository developerRepo= new DeveloperRepository();
+        return developerRepo.getDevInfo(id).toString();
+    }
+
+    public String getSkillById() {
+        SkillRepository SkillRepo= new SkillRepository();
+        return SkillRepo.getById(Long.valueOf(id)).toString();
     }
 }

@@ -23,19 +23,19 @@ public class DeveloperRepository {
     }
 
     // выводим информацию по разработчику
-    public String getDevInfo (String id) {
+    public Developer getDevInfo (String id) {
         try (BufferedReader in  = new BufferedReader(new FileReader(inFileName))) {
             String line;
             while ((line = in.readLine()) != null) {
                 String[] devInfo = line.split("\\t");
                 if (id.equals(devInfo[0])) {
-                    return line;
+                    return getDevFromString(line);
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "no dev with such id";
+        return new Developer();
     }
 
     // добавляем новые Skills
@@ -59,13 +59,13 @@ public class DeveloperRepository {
     }
 
     // Удаляем разработчика
-    public void deleteDev(String id) {
+    public void deleteDev(Long id) {
         List<Developer> developers = new ArrayList<>();
         try (BufferedReader in  = new BufferedReader(new FileReader(inFileName))) {
             String line;
             while ((line = in.readLine()) != null) {
                 String[] devData = line.split("\\t");
-                if (!id.equals(devData[0])) {
+                if (!id.equals(Long.valueOf(devData[0]))) {
                     developers.add(getDevFromString(line));
                 } else {
                     System.out.println("Developer erased");

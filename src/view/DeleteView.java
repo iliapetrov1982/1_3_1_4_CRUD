@@ -37,12 +37,14 @@ public class DeleteView {
 
     private void deleteDev() {
         System.out.println("Please, input current Dev ID");
-        String id = scanner.nextLine();
+        Long id = Long.valueOf(scanner.nextLine());
         new Deleting(id).deleteCurrentDev();
     }
 
     private void deleteSkill() {
-
+        System.out.println("Please, input current skill ID");
+        Long id = Long.valueOf(scanner.nextLine());
+        new Deleting(id).deleteCurrentSkill();
     }
 
     private void deletteAccount() {

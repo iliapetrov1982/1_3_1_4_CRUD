@@ -44,6 +44,10 @@ public class ReadView {
     }
 
     private void readSkill() {
+        System.out.println("Please, input current skill ID");
+        String id = scanner.nextLine();
+        String devInfo = new Reading(id).getSkillById();
+        System.out.println(devInfo);
     }
 
     private void readAccount() {

@@ -44,11 +44,17 @@ public class UpdateView extends CreateView {
         String id = scanner.nextLine();
         System.out.println("Please, input new Dev skills (type 0 to stop )");
         Set<Skill> skills = super.getSkills();
-        new Updating(id, skills).updateSkils();
+        new Updating(id, skills).updateDevSkills();
+        System.out.println("Developer successfully updated");
     }
 
     private void updateSkill() {
-
+        System.out.println("Please, input current skill ID");
+        Long id = Long.valueOf(scanner.nextLine());
+        System.out.println("Please, input new skill");
+        String skillName = scanner.nextLine();
+        new Updating(new Skill(id, skillName)).updateSkill();
+        System.out.println("Skill successfully updated");
     }
 
     private void updateAccount() {
