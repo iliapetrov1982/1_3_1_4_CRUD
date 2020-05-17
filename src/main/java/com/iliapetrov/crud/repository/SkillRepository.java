@@ -1,6 +1,6 @@
-package repository;
+package main.java.com.iliapetrov.crud.repository;
 
-import model.Skill;
+import main.java.com.iliapetrov.crud.model.Skill;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class SkillRepository {
         writeToFile(skills);
     }
 
-    // удаляем skill 
+    // удаляем skill
     public void deleteById(Long id) {
         List<Skill> skills = new ArrayList<>();
         try (BufferedReader in  = new BufferedReader(new FileReader(inFileName))) {

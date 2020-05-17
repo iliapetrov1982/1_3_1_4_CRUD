@@ -1,4 +1,4 @@
-package model;
+package main.java.com.iliapetrov.crud.model;
 
 public class Skill {
     private Long id;
@@ -26,6 +26,10 @@ public class Skill {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override

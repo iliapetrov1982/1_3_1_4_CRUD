@@ -1,7 +1,7 @@
-package view;
+package main.java.com.iliapetrov.crud.view;
 
-import controller.Updating;
-import model.Skill;
+import main.java.com.iliapetrov.crud.controller.Updating;
+import main.java.com.iliapetrov.crud.model.Skill;
 
 import java.util.Scanner;
 import java.util.Set;

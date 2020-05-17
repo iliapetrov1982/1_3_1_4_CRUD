@@ -1,11 +1,10 @@
-package view;
+package main.java.com.iliapetrov.crud.view;
 
-import controller.Creating;
-import model.Account;
-import model.Developer;
-import model.Skill;
+import main.java.com.iliapetrov.crud.controller.Creating;
+import main.java.com.iliapetrov.crud.model.Account;
+import main.java.com.iliapetrov.crud.model.Developer;
+import main.java.com.iliapetrov.crud.model.Skill;
 
-import java.sql.SQLOutput;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -63,7 +62,7 @@ public class CreateView {
         Long id = Long.valueOf(scanner.nextLine());
         System.out.println("Please, input brand new skill name");
         String name = scanner.nextLine();
-        new Creating(new Skill(id, name)).addNewSkilll();
+//        new Creating(new Skill(id, name)).addNewSkilll();
         System.out.println("New Dev created successfully");
     }
 

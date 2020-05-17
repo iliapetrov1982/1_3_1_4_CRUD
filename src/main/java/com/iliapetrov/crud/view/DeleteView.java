@@ -1,6 +1,6 @@
-package view;
+package main.java.com.iliapetrov.crud.view;
 
-import controller.Deleting;
+import main.java.com.iliapetrov.crud.controller.Deleting;
 
 import java.util.Scanner;
 

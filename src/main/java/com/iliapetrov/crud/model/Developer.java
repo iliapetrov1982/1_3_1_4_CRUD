@@ -1,4 +1,4 @@
-package model;
+package main.java.com.iliapetrov.crud.model;
 
 import java.util.Set;
 

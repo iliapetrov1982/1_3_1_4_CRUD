@@ -1,7 +1,7 @@
-package controller;
+package main.java.com.iliapetrov.crud.controller;
 
-import repository.DeveloperRepository;
-import repository.SkillRepository;
+import main.java.com.iliapetrov.crud.repository.DeveloperRepository;
+import main.java.com.iliapetrov.crud.repository.SkillRepository;
 
 public class Deleting {
     private Long id;

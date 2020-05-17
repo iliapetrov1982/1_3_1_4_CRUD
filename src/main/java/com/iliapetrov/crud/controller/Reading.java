@@ -1,8 +1,7 @@
-package controller;
+package main.java.com.iliapetrov.crud.controller;
 
-import model.Developer;
-import repository.DeveloperRepository;
-import repository.SkillRepository;
+import main.java.com.iliapetrov.crud.repository.DeveloperRepository;
+import main.java.com.iliapetrov.crud.repository.SkillRepository;
 
 public class Reading {
     private String id;

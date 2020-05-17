@@ -1,7 +1,6 @@
-package repository;
+package main.java.com.iliapetrov.crud.repository;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class Test {
     private String inFileName;

@@ -1,4 +1,4 @@
-package model;
+package main.java.com.iliapetrov.crud.model;
 
 public class Account {
     private Long id;

@@ -1,8 +1,8 @@
-package repository;
+package main.java.com.iliapetrov.crud.repository;
 
-import model.Account;
-import model.Developer;
-import model.Skill;
+import main.java.com.iliapetrov.crud.model.Account;
+import main.java.com.iliapetrov.crud.model.Developer;
+import main.java.com.iliapetrov.crud.model.Skill;
 
 import java.io.*;
 import java.util.ArrayList;

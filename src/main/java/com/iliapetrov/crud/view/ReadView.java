@@ -1,6 +1,6 @@
-package view;
+package main.java.com.iliapetrov.crud.view;
 
-import controller.Reading;
+import main.java.com.iliapetrov.crud.controller.Reading;
 
 import java.util.Scanner;
 

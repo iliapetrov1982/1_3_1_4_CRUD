@@ -1,9 +1,9 @@
-package controller;
+package main.java.com.iliapetrov.crud.controller;
 
-import model.Developer;
-import model.Skill;
-import repository.DeveloperRepository;
-import repository.SkillRepository;
+import main.java.com.iliapetrov.crud.model.Developer;
+import main.java.com.iliapetrov.crud.model.Skill;
+import main.java.com.iliapetrov.crud.repository.DeveloperRepository;
+import main.java.com.iliapetrov.crud.repository.SkillRepository;
 
 public class Creating {
     private Developer developer;
