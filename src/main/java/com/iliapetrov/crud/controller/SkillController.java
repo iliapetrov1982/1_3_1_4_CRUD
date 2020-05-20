@@ -1,13 +1,15 @@
 package main.java.com.iliapetrov.crud.controller;
 
 import main.java.com.iliapetrov.crud.model.Skill;
+import main.java.com.iliapetrov.crud.repository.GenericRepository;
+import main.java.com.iliapetrov.crud.repository.JavaIOSkillRepositoryImpl;
 import main.java.com.iliapetrov.crud.repository.SkillRepository;
 
 public class SkillController {
-    private final SkillRepository skillRepository;
+    private final GenericRepository<Skill,Long> skillRepository;
 
     public SkillController() {
-        this.skillRepository = new SkillRepository();
+        this.skillRepository = new JavaIOSkillRepositoryImpl();
     }
 
     public void addNewSkilll(Long id, String name) {
