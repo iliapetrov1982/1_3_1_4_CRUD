@@ -2,3 +2,7 @@
 2	mike@yandex.ru	BANNED
 3	bill@mail.ru	DELETED
 4	maria2@gmail.com	ACTIVE
+5	ilia-p@yandex.ru	ACTIVE
+6	vasaa@gmail.com	ACTIVE
+7	xxx@mail.ru	BANNED
+8	ccc@netcom	DELETED

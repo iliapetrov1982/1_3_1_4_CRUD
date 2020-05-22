@@ -2,25 +2,28 @@ package main.java.com.iliapetrov.crud.model;
 
 public class Account {
     private Long id;
-    private String acoount;
+    private String name;
     private AccountStatus status;
 
-    public Account(Long id, String acoount, String account) {
+    public Account(Long id, String acoount, AccountStatus status) {
         this.id = id;
-        this.acoount = acoount;
-        this.acoount = account;
+        this.name = acoount;
+        this.status = status;
     }
 
     public Account(Long id) {
         this.id = id;
     }
 
+    public Account() {
+    }
+
     public Long getId() {
         return id;
     }
 
-    public String getAcoount() {
-        return acoount;
+    public String getName() {
+        return name;
     }
 
     public AccountStatus getStatus() {
@@ -33,10 +36,10 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", acoount='" + acoount + '\'' +
-                ", status=" + status +
-                '}';
+        if (id != null) {
+            return String.format("%d\t%s\t%s", id, name, status);
+        } else {
+            return "Account not found";
+        }
     }
 }

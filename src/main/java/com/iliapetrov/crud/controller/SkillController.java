@@ -2,8 +2,7 @@ package main.java.com.iliapetrov.crud.controller;
 
 import main.java.com.iliapetrov.crud.model.Skill;
 import main.java.com.iliapetrov.crud.repository.GenericRepository;
-import main.java.com.iliapetrov.crud.repository.JavaIOSkillRepositoryImpl;
-import main.java.com.iliapetrov.crud.repository.SkillRepository;
+import main.java.com.iliapetrov.crud.repository.io.JavaIOSkillRepositoryImpl;
 
 public class SkillController {
     private final GenericRepository<Skill,Long> skillRepository;
@@ -20,8 +19,6 @@ public class SkillController {
     }
 
     public String getSkillById(Long id) {
-        Skill skill = new Skill();
-        skill.setId(id);
         return skillRepository.getById(id).toString();
     }
 
@@ -29,12 +26,10 @@ public class SkillController {
         Skill skill = new Skill();
         skill.setId(id);
         skill.setName(name);
-        SkillRepository skillRepo = new SkillRepository();
-        skillRepo.update(skill);
+        skillRepository.update(skill);
     }
 
     public void deleteCurrentSkill(Long id) {
-        SkillRepository skillRepo = new SkillRepository();
-        skillRepo.deleteById(id);
+        skillRepository.deleteById(id);
     }
 }

@@ -1,7 +1,6 @@
 package main.java.com.iliapetrov.crud.view;
 
 import main.java.com.iliapetrov.crud.controller.*;
-import main.java.com.iliapetrov.crud.model.Skill;
 
 import java.util.Scanner;
 

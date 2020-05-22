@@ -1,12 +1,13 @@
-package main.java.com.iliapetrov.crud.repository;
+package main.java.com.iliapetrov.crud.repository.io;
 
 import main.java.com.iliapetrov.crud.model.Skill;
+import main.java.com.iliapetrov.crud.repository.SkillRepository;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaIOSkillRepositoryImpl implements SkillRepo {
+public class JavaIOSkillRepositoryImpl implements SkillRepository {
     private final String inFileName = "src/resources/skills.txt";
 
     // Получаем skill по ID
@@ -44,16 +45,17 @@ public class JavaIOSkillRepositoryImpl implements SkillRepo {
     };
 
     // Создаем новый skill
-    public void save(Skill skill) {
+    public Skill save(Skill skill) {
         try (PrintWriter out = new PrintWriter(new FileWriter(inFileName, true))) {
             out.println(skill.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return skill;
     }
 
     // Обновляем cуществующий skill
-    public void update (Skill skill) {
+    public Skill update (Skill skill) {
         List<Skill> skills = new ArrayList<>();
         Long skillId = skill.getId();
         try (BufferedReader in  = new BufferedReader(new FileReader(inFileName))) {
@@ -70,6 +72,7 @@ public class JavaIOSkillRepositoryImpl implements SkillRepo {
             e.printStackTrace();
         }
         writeToFile(skills);
+        return skill;
     }
 
     // удаляем skill

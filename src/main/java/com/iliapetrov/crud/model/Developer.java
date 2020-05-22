@@ -18,6 +18,14 @@ public class Developer {
     public Developer() {
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setSkills(Set<Skill> skills) {
+        this.skills = skills;
+    }
+
     public Long getId() {
         return id;
     }
@@ -37,7 +45,7 @@ public class Developer {
     @Override
     public String toString() {
         if (id != null) {
-        return String.format("%d\t%s\t%s\t%d",
+        return String.format("%d\t%s\t%s\t%d\n",
                 id,
                 name,
                 setValuesToString(skills),
