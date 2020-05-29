@@ -13,9 +13,11 @@ public class AccountController {
         this.accountRepository = new JavaIOAccountRepositoryImpl();
     }
 
-    public void addNewAccount(Long id, String name) {
+    public Account addNewAccount(Long id, String name) {
         Account account = new Account(id, name, AccountStatus.ACTIVE);
         accountRepository.save(account);
+        Account account1;
+        return account;
     }
 
     public String getAccountById(Long id) {

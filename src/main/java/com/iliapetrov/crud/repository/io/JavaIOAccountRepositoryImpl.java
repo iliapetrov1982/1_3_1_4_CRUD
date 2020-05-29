@@ -74,7 +74,7 @@ public class JavaIOAccountRepositoryImpl implements AccountRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        writeToFile(accounts);
+        IOUtils.writeToFile(accounts, inFileName);
         return account;
     }
 
@@ -94,18 +94,7 @@ public class JavaIOAccountRepositoryImpl implements AccountRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        writeToFile(accounts);
-    }
-
-    @Override
-    public void writeToFile(List<Account> accounts) {
-        try (PrintWriter out = new PrintWriter(new FileWriter(inFileName))) {
-            for (Account account : accounts) {
-                out.println(account.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        IOUtils.writeToFile(accounts, inFileName);
     }
 
     // Получкем объект Skill из строки файла

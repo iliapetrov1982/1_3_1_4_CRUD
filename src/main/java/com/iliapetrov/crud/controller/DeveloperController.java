@@ -7,15 +7,16 @@ import main.java.com.iliapetrov.crud.repository.io.JavaIODeveloperRepositoryImpl
 
 import java.util.Set;
 
-public class DevelopeController {
+public class DeveloperController {
     private final GenericRepository<Developer, Long> developerRepository;
 
-    public DevelopeController() {
+    public DeveloperController() {
         this.developerRepository = new JavaIODeveloperRepositoryImpl();
     }
 
-    public void addNewDeveloper(Developer developer) {
+    public Developer addNewDeveloper(Developer developer) {
         developerRepository.save(developer);
+        return developer;
     }
 
     public String getDevInfoById(Long id) {

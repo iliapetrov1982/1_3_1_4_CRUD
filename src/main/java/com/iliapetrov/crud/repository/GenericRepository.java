@@ -8,5 +8,4 @@ public interface GenericRepository<T,ID> {
     T save(T object);
     T update (T object);
     void deleteById(ID id);
-    void writeToFile(List<T> objects);
 }

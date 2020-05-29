@@ -11,11 +11,12 @@ public class SkillController {
         this.skillRepository = new JavaIOSkillRepositoryImpl();
     }
 
-    public void addNewSkilll(Long id, String name) {
+    public Skill addNewSkilll(Long id, String name) {
         Skill skill = new Skill();
         skill.setId(id);
         skill.setName(name);
         skillRepository.save(skill);
+        return skill;
     }
 
     public String getSkillById(Long id) {

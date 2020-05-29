@@ -13,6 +13,14 @@ import java.util.Set;
 
 public class JavaIODeveloperRepositoryImpl implements DeveloperRepository {
     private final String inFileName = "src/resources/developers.txt";
+    private final JavaIOSkillRepositoryImpl skillRepository;
+    private final JavaIOAccountRepositoryImpl accountRepository;
+
+
+    public JavaIODeveloperRepositoryImpl() {
+        this.skillRepository = new JavaIOSkillRepositoryImpl();
+        this.accountRepository = new JavaIOAccountRepositoryImpl();
+    }
 
     @Override
     public Developer getById(Long id) {
@@ -75,7 +83,7 @@ public class JavaIODeveloperRepositoryImpl implements DeveloperRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        writeToFile(developers);
+        IOUtils.writeToFile(developers, inFileName);
         return developer;
     }
 
@@ -95,18 +103,7 @@ public class JavaIODeveloperRepositoryImpl implements DeveloperRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        writeToFile(developers);
-    }
-
-    @Override
-    public void writeToFile(List<Developer> developers) {
-        try (PrintWriter out = new PrintWriter(new FileWriter(inFileName))) {
-            for (Developer developer : developers) {
-                out.print(developer.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        IOUtils.writeToFile(developers, inFileName);
     }
 
     // Преобразуем Set<Skill> в строку
@@ -133,9 +130,9 @@ public class JavaIODeveloperRepositoryImpl implements DeveloperRepository {
     // Получаем Set<Skill> из строки
     private Set<Skill> getSkillSeFromString(String skillString) {
         Set<Skill> skillSet = new HashSet<>();
-        String[] skills = skillString.split(",");
-        for (String skill : skills) {
-            skillSet.add(new Skill(Long.valueOf(skill)));
+        String[] skillIDs = skillString.split(",");
+        for (String skillId : skillIDs) {
+            skillSet.add(skillRepository.getById(Long.valueOf(skillId)));
         }
         return skillSet;
     }

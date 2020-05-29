@@ -5,18 +5,17 @@ import main.java.com.iliapetrov.crud.model.Account;
 import main.java.com.iliapetrov.crud.model.Developer;
 import main.java.com.iliapetrov.crud.model.Skill;
 
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
 public class DeveloperView extends AbstractView {
     private final Scanner scanner;
-    private final DevelopeController developeController;
+    private final DeveloperController developeController;
 
     public DeveloperView(Scanner scanner) {
         super(scanner);
         this.scanner = scanner;
-        this.developeController = new DevelopeController();
+        this.developeController = new DeveloperController();
     }
 
     @Override

@@ -71,7 +71,7 @@ public class JavaIOSkillRepositoryImpl implements SkillRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        writeToFile(skills);
+        IOUtils.writeToFile(skills, inFileName);
         return skill;
     }
 
@@ -89,7 +89,7 @@ public class JavaIOSkillRepositoryImpl implements SkillRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        writeToFile(skills);
+        IOUtils.writeToFile(skills, inFileName);
     }
 
     // Получкем объект Skill из строки файла
@@ -98,16 +98,5 @@ public class JavaIOSkillRepositoryImpl implements SkillRepository {
         Long id = Long.valueOf(devData[0]);
         String name = devData[1];
         return new Skill(id, name);
-    }
-
-    // Пишем List<Skill> в файл
-    public void writeToFile(List<Skill> skills) {
-        try (PrintWriter out = new PrintWriter(new FileWriter(inFileName))) {
-            for (Skill skill : skills) {
-                out.println(skill.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
