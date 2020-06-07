@@ -15,9 +15,7 @@ public class AccountController {
 
     public Account addNewAccount(Long id, String name) {
         Account account = new Account(id, name, AccountStatus.ACTIVE);
-        accountRepository.save(account);
-        Account account1;
-        return account;
+        return accountRepository.save(account);
     }
 
     public String getAccountById(Long id) {

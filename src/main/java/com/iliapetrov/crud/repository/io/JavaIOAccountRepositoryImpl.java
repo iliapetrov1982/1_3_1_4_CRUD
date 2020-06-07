@@ -2,7 +2,6 @@ package main.java.com.iliapetrov.crud.repository.io;
 
 import main.java.com.iliapetrov.crud.model.Account;
 import main.java.com.iliapetrov.crud.model.AccountStatus;
-import main.java.com.iliapetrov.crud.model.Skill;
 import main.java.com.iliapetrov.crud.repository.AccountRepository;
 
 import java.io.*;

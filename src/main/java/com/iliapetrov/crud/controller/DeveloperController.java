@@ -15,8 +15,7 @@ public class DeveloperController {
     }
 
     public Developer addNewDeveloper(Developer developer) {
-        developerRepository.save(developer);
-        return developer;
+        return developerRepository.save(developer);
     }
 
     public String getDevInfoById(Long id) {

@@ -15,8 +15,7 @@ public class SkillController {
         Skill skill = new Skill();
         skill.setId(id);
         skill.setName(name);
-        skillRepository.save(skill);
-        return skill;
+        return skillRepository.save(skill);
     }
 
     public String getSkillById(Long id) {
